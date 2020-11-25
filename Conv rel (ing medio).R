@@ -16,6 +16,11 @@ plot(x=aux_IM_log,y = Mean_anual_P_IM,pch =1, main = "Convergencia condicional\n
 abline(lm(Mean_anual_P_IM ~ aux_IM_log),col="orchid")
 text(aux_IM_log,Mean_anual_P_IM,aux_IM_name$`Country Code`,cex = 0.6,pos = 4,col = "red")
 
+#suavizar diagrama de dispersión (no recomendado)
+
+scatter.smooth(x=aux_IM_log,y=Mean_anual_P_IM,main = "Convergencia condicional\n (ingreso medio)",xlab = "Año base 1960", ylab = "Tasa crec. PIB-PCT", col="blue")
+text(aux_IM_log,Mean_anual_P_IM,aux_IM_name$`Country Code`,cex = 0.6,pos = 4,col = "red")
+
 #graficar en 3d
 
 library(scatterplot3d)
@@ -38,7 +43,7 @@ text(aux_IM_log,Mean_anual_P_IM,aux_IM_name$`Country Code`,cex = 0.6,pos = 2,col
 
 #Agregar barras a los puntos y guardar gráfica
 
-G3D <- scatterplot3d(ID_IM,aux_IM_log,Mean_anual_P_IM,pch = 16,highlight.3d = TRUE,type = "h",main = "Convergencia relativa \n (ingreso mediano alto)",xlab = "País", ylab = "1961",zlab = "Tasa crecimiento")
+G3D <- scatterplot3d(ID_IM,aux_IM_log,Mean_anual_P_IM,pch = 16,highlight.3d = TRUE,type = "h",main = "Convergencia condicional \n (ingreso mediano alto)",xlab = "País", ylab = "1961",zlab = "Tasa crecimiento")
 
 #AGREGAR NOMBRES A LOS PUNTOS
 
