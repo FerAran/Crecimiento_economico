@@ -37,7 +37,7 @@ text(pib_base$`log_pibpct-1960`,Mean_anual_Pais,CA$`Country Code`,cex = 0.6,pos 
 #abline(lm(Mean_anual_Pais~pib_base$`log_pibpct-1960`), col = "green")
 #text(pib_base$`log_pibpct-1960`,Mean_anual_Pais,CA$`Country Code`,cex = 0.6,pos = 4,col = "red")
 #suavizar diagrama de dispersión (no recomendado)
-#scatter.smooth(x=pib_base$`log_pibpct-1960`,y=Mean_anual_Pais)
+scatter.smooth(x=pib_base$`log_pibpct-1960`,y=Mean_anual_Pais)
 
 #ACTIVAR LIBRERÍA
 
